@@ -14,18 +14,19 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          shape: ContinuousRectangleBorder(
+            borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(50),
+              bottomRight: Radius.circular(50),
+            ),
+          ),
           backgroundColor: Colors.green,
-          automaticallyImplyLeading: false,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text("Plant Disease",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  )),
-              SizedBox(width: 0), // Jarak antara teks dan tombol logout
-            ],
+          title: Text(
+            "Plant Disease",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           centerTitle: true,
         ),
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
             childAspectRatio: 0.8,
           ),
           itemBuilder: (context, index) => Padding(
-            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 10),
             child: GestureDetector(
               onTap: () {
                 Navigator.push(
@@ -68,8 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       borderRadius: BorderRadius.circular(16),
                       child: Image.network(
                         listDisease[index].imgUrls,
-                        height: 200,
-                        width: 200,
+                        height: 400,
+                        width: 300,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -79,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: Container(
                       padding: EdgeInsets.symmetric(
                         horizontal: 16,
-                        vertical: 8,
+                        vertical: 10,
                       ),
                       width: MediaQuery.of(context).size.width * 0.3,
                       decoration: BoxDecoration(

@@ -14,6 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Penyakit Tanaman',
       theme: ThemeData(
+        fontFamily: 'Poppins',
         primarySwatch: Colors.green,
       ),
       home: MyHomePage(),
