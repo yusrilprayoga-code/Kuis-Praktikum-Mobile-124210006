@@ -1,5 +1,7 @@
 # kuis_praktikum_124210006
 
+## Only Android Emulator
+
 A new Flutter project.
 
 ## Getting Started
